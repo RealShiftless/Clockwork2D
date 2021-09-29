@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>6efba8a9-a407-4029-bdd0-651d22a87386</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Clockwork2D</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Content\" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Components\SpriteRenderer.cs" />
+    <Compile Include="..\Clockwork2D\Core\ClockworkGame2D.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\EngineComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\GameContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Managers\ObjectManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Managers\RenderManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Managers\SceneManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Types\Camera.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Types\Component.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Types\GameObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Types\Interfaces\IDrawable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Types\Scene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Types\Sprite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Types\SpriteBatchSettings.cs" />
+  </ItemGroup>
+</Project>
