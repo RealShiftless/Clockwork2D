@@ -9,7 +9,7 @@ First make sure you followed [these](https://docs.monogame.net/articles/getting_
 Now download the repository, there are two ways to do this,
 
 1. The best way to do this is by cloning the repository, this takes a little bit more set up, but will make it easier to keep Clockwork updates as I make updates.
-For this you have to download a github client, for this example I will use [this one](https://desktop.github.com) made by github themselves.
+For this you have to download a github client, for this example I will use [this one](https://desktop.github.com) made by github themselves.<br>
 When you have github client open, click on File in the top right, and than click on clone repository.
 In this little window click on URL, and paste: "https://github.com/RealShiftless/Clockwork2D" without the parentheses in the url box, choose your location for it.
 Now you have the github repository cloned.
