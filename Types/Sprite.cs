@@ -29,14 +29,40 @@ namespace Clockwork2D
 
         public Effect Effect;
 
-        public int Width
+        /// <summary>
+        /// The Width times the scale of the sprite
+        /// </summary>
+        public float Width
+        {
+            get
+            {
+                return Texture.Width * Scale.X;
+            }
+        }
+        /// <summary>
+        /// The Height times the scale of the sprite
+        /// </summary>
+        public float Height
+        {
+            get
+            {
+                return Texture.Height * Scale.Y;
+            }
+        }
+        /// <summary>
+        /// The raw Width of the sprite
+        /// </summary>
+        public int RawWidth
         {
             get
             {
                 return Texture.Width;
             }
         }
-        public int Height
+        /// <summary>
+        /// The raw Height of the sprite
+        /// </summary>
+        public int RawHeight
         {
             get
             {

@@ -92,7 +92,7 @@ namespace Clockwork2D.Internal
             if (!_requests.ContainsKey(effect))
                 _requests.Add(effect, new List<RenderCall>());
 
-            _requests[effect].Add(new RenderCall(sprite, new Rectangle((int)position.X, (int)position.Y, sprite.Width * (int)sprite.Scale.X, sprite.Height * (int)sprite.Scale.Y), 0));
+            _requests[effect].Add(new RenderCall(sprite, new Rectangle((int)position.X, (int)position.Y, (int)sprite.Width, (int)sprite.Height), 0));
         }
 
 

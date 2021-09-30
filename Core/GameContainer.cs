@@ -36,8 +36,6 @@ namespace Clockwork2D.Internal
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            Content.Load<Texture2D>("epic");
-
             RenderManager.Initialize(_spriteBatch, new SpriteEffect(GraphicsDevice));
             SceneManager.Initialize();
         }
