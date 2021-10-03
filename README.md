@@ -1,7 +1,7 @@
 # Clockwork2D
 Monogame based 2D Game / Graphical Engine ALPHA Release 1.0
 
-## How to install:
+## How to install
 ### Step 1
 First make sure you followed [these](https://docs.monogame.net/articles/getting_started/0_getting_started.html) install instructions to make sure you are using monogame 3.8, the latest version of monogame
 
