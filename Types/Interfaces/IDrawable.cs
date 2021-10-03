@@ -9,5 +9,6 @@ namespace Clockwork2D
     public interface IDrawable
     {
         public void Draw(SpriteBatch spriteBatch, Camera fromCamera, Rectangle destinationRect, float rotation);
+
     }
 }

@@ -17,6 +17,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Components\SpriteRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Events\ClockworkEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Events\SceneManagerEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Extensions.cs" />
+    <Compile Include="..\Clockwork2D\Managers\Input.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Types\Interfaces\IClickable.cs" />
     <Compile Include="..\Clockwork2D\Core\ClockworkGame2D.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\EngineComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\GameContainer.cs" />

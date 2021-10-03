@@ -8,6 +8,16 @@ namespace Clockwork2D
 {
     public sealed class Camera : EngineComponent
     {
+        /* STATIC */
+        public static Camera Main
+        {
+            get
+            {
+                return SceneManager.CurrentScene.Cameras[0];
+            }
+        }
+
+
         /* CAMERA VARIABLES */
         public Vector2 Position;
         public RenderTarget2D Target;

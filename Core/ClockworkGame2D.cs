@@ -77,6 +77,10 @@ namespace Clockwork2D
         {
             return _container.Content;
         }
+        public Vector2 GetWindowSize()
+        {
+            return new Vector2(WindowWidth, WindowHeight);
+        }
 
 
         /* VIRTUALS */

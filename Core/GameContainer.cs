@@ -41,6 +41,7 @@ namespace Clockwork2D.Internal
         }
         protected override void Update(GameTime gameTime)
         {
+            Input.Update();
             SceneManager.Update(gameTime);
 
             base.Update(gameTime);

@@ -8,19 +8,18 @@ namespace Clockwork2D
 {
     public class Sprite : EngineComponent, IDrawable
     {
+        // Defaults
+        public static Color DefaultColor = Color.White;
+        public static SpriteOrigin DefaultOrigin = SpriteOrigin.TopLeft;
+        public static Vector2 DefaultScale = Vector2.One;
+
+
+        // Sprite Settings
         public Texture2D Texture;
         public Rectangle? SourceRectangle;
         public Color Color;
         public Vector2 Origin;
         public Vector2 Scale;
-
-        private SpriteEffects _spriteFlip
-        {
-            get
-            {
-                return ((FlipX ? SpriteEffects.FlipHorizontally : 0) | (FlipY ? SpriteEffects.FlipVertically : 0));
-            }
-        }
 
         public bool FlipX = false;
         public bool FlipY = false;
@@ -29,6 +28,18 @@ namespace Clockwork2D
 
         public Effect Effect;
 
+
+        // Sprite Flipping
+        private SpriteEffects _spriteFlip
+        {
+            get
+            {
+                return ((FlipX ? SpriteEffects.FlipHorizontally : 0) | (FlipY ? SpriteEffects.FlipVertically : 0));
+            }
+        }
+
+
+        // Sprite Size
         /// <summary>
         /// The Width times the scale of the sprite
         /// </summary>
@@ -70,15 +81,44 @@ namespace Clockwork2D
             }
         }
 
+
+        // Constructor
         public Sprite(Texture2D texture)
         {
             Texture = texture;
 
-            Color = Color.White;
-            Origin = Vector2.Zero;
-            Scale = Vector2.One;
+            SetDefaults();
+        }
+        public Sprite(string filename)
+        {
+            Texture = Content.Load<Texture2D>(filename);
+
+            SetDefaults();
+        }
+        private void SetDefaults()
+        {
+            Color = DefaultColor;
+
+            switch(DefaultOrigin)
+            {
+                case SpriteOrigin.TopLeft:
+                    Origin = Vector2.Zero;
+                    break;
+
+                case SpriteOrigin.Center:
+                    Origin = new Vector2(Width/2, Height/2);
+                    break;
+
+                case SpriteOrigin.BottomCenter:
+                    Origin = new Vector2(Width/2, Height);
+                    break;
+            }
+
+            Scale = DefaultScale;
         }
 
+
+        // Main
         public void Draw(SpriteBatch spriteBatch, Camera fromCamera, Rectangle destinationRect, float rotation)
         {
             Rectangle cameraPerspectiveRect = new Rectangle(
@@ -90,5 +130,12 @@ namespace Clockwork2D
 
             spriteBatch.Draw(Texture, cameraPerspectiveRect, SourceRectangle, Color, rotation, Origin, _spriteFlip, LayerDepth);
         }
+    }
+
+    public enum SpriteOrigin
+    {
+        TopLeft = 0,
+        Center,
+        BottomCenter
     }
 }

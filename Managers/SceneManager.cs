@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Clockwork2D.Events;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,6 +12,12 @@ namespace Clockwork2D
         private static List<Type> _scenes = new List<Type>();
         private static Dictionary<string, int> _sceneDict = new Dictionary<string, int>();
         private static Scene _currentScene;
+
+
+        /* EVENTS */
+        public static SceneManagerEvent StartingScene;
+        public static SceneManagerEvent ClosingScene;
+
 
 
         /* PROPERTIES */
@@ -62,9 +69,13 @@ namespace Clockwork2D
                 throw new Exception("Scene ID: " + id + " is out of range!");
 
             if(_currentScene != null)
+            {
+                ClosingScene?.TryInvoke(_currentScene);
                 _currentScene.DoClosing();
+            }
 
             _currentScene = (Scene) Activator.CreateInstance(_scenes[id]);
+            StartingScene?.TryInvoke(_currentScene);
             _currentScene.DoInit();
         }
         public static void SetScene(string name)
