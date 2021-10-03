@@ -17,7 +17,11 @@ Now you have the github repository cloned.
 2. Click on Code in the home of the repository, and click on Download Zip, export it to the location you want once downloaded.
 
 
-## Creating a project using clockwork
+## Using Clockwork
+The easiest way to get a good understanding of how to use clockwork is to toy with [the example project](https://github.com/RealShiftless/ClockworkExample), you can download this repository to your local machine (I would not recommend cloning this repository) and just open it like any other vs project
+
+
+## Creating a new project using clockwork
 ### Step 1
 Create a new project using Monogame 3.8, if installed succesfully it should be named something like "MonoGame Cross-Platform Desktop Application (OpenGL)"
 
@@ -26,7 +30,3 @@ Now in this project in visual studio, right click on your solution (Solution 'pr
 
 ### Step 3
 Right click on "Dependencies", than click on "Add Shared Project Reference..." and click on Clockwork2D
-
-
-## Using Clockwork
-The easiest way to get a good understanding of how to use clockwork is to toy with [the example project](https://github.com/RealShiftless/ClockworkExample), you can download this repository to your local machine (I would not recommend cloning this repository) and just open it like any other vs project
