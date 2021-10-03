@@ -4,6 +4,9 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Net;
 using System.Text;
 
 namespace Clockwork2D
@@ -34,16 +37,17 @@ namespace Clockwork2D
         
 
 
-        // Constructor
+        /* CONSTRUCTOR */ 
         public ClockworkGame2D()
         {
+            // Singleton
             if(Instance != null)
                 throw new Exception("Cannot intantiate more than 1 Clockwork2DGame");
 
             Instance = this;
 
+            // Creating the game container
             _container = new GameContainer();
-
             _container.Initializing += Initialize;
         }
 

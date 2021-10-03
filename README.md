@@ -28,5 +28,5 @@ Now in this project in visual studio, right click on your solution (Solution 'pr
 Right click on "Dependencies", than click on "Add Shared Project Reference..." and click on Clockwork2D
 
 
-## Using the 
-
+## Using Clockwork
+The easiest way to get a good understanding of how to use clockwork is to toy with [the example project](https://github.com/RealShiftless/ClockworkExample), you can download this repository to your local machine (I would not recommend cloning this repository) and just open it like any other vs project

@@ -36,4 +36,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Types\Sprite.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Types\SpriteBatchSettings.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)clockwork_version">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
